@@ -1,36 +1,38 @@
 # Tic-Tac-Toe Adversarial Agent
 
-This is a project template from UC Berkeley, for an adversarial agent. This specific implementation is for playing Tic Tac Toe, offering users the option to choose board size and difficulty level. The agent utilizes various search algorithms including, but not limited to; Alpha-Beta Pruning, Expectimax, and Minimax. Each algorithm is implemented both with and without cutoff distances to allow users to experiment with different strategies and observe their impact on gameplay. The project provides an interactive interface where users can play against the adversarial agent, selecting the board size and difficulty level according to their preference. 
+This is a project template from UC Berkeley, for an adversarial agent. This specific implementation is for playing Tic Tac Toe, allowing users to choose board size and difficulty level. The agent utilizes various search algorithms including, but not limited to; Alpha-Beta Pruning, Expectimax, and Minimax. Each algorithm is implemented both with and without cutoff distances to allow users to experiment with different strategies and observe their impact on gameplay. The project provides an interactive interface where users can play against the adversarial agent, selecting the board size and difficulty level according to their preference. 
 
 ## Features
 
-- **Selectable Board Size:** Games can be played at any selecatble n x n board size. Note; larger boards with certain algorithms may run slower during testinng.
+- **Selectable Board Size:** Games can be played at any selectable n x n board size. Note; larger boards with certain algorithms may run slower during testing.
 
-- **Selectable Difficulty:** Utilize simiplier/more advanced search algorithms or lower/higher cutoff depths to lower/raise the difficulty,
+- **Selectable Difficulty:** Utilize simpler/more advanced search algorithms or lower/higher cutoff depths to lower/raise the difficulty,
 
-- **Unwinnable difficulty:** The games becomes very difficult / unwinnable at certain difficltiuies, utilizing cutoff depth and evalution functions to adjust adverisal bot optimizition.
+- **Unwinnable difficulty:** The games become very difficult/unwinnable at certain difficulties, utilizing cutoff depth and evaluation functions to adjust adversarial bot optimization.
 
 ## How does it work?
 
-Using a tkinter UI to display the game state, users can select the aglorithm utilized by the adversial agent, as well as the cutoff depth, creating an adjustable diffilcituly. The game is unwinnable with past cetain cutoff depths as the evalutation fnction can optimially decide how to block users from winning, it is however every rare for the adversail bbot to win, with draws being the most likely outcome. Large cutoff depths in conjunction with large board zies may lead to performance issues due to this.
+Using a tkinter UI to display the game state, users can select the algorithm utilized by the adversarial agent, as well as the cutoff depth, creating an adjustable difficulty. The game is unwinnable with past certain cutoff depths as the evaluation function can optimally decide how to block users from winning, it is however very rare for the adversarial bot to win, with draws being the most likely outcome. Large cutoff depths in conjunction with large board sizes may lead to performance issues due to this.
 
 <p align="center">
-  <img src="" />
+ <img src="images/image.png" />
 </p>
 
 ## Algorithms
 
-- **Alpha-Beta Pruning**
+- **Minimax:** A decision-making algorithm used in adversarial games to determine the optimal move for a player, considering the possible moves of both player and bot to select the one that minimizes the maximum possible loss.
 
-- **Expectimax:**
+- **Alpha-Beta Pruning** A search algorithm used to reduce the number of nodes evaluated by the minimax algorithm. It prunes branches of the search tree that cannot influence the final move, thus improving efficiency without affecting the final result.
 
-- **Minimax:**
+- **Expectimax:** An extension of the minimax algorithm that takes uncertainty in the game into account during decision-making, typically used in games with chance elements like dice rolls or card draws. In the context of this game, each move is equally likely to occur.
+
+- **Cutoff Algorithms:** These algorithms are used to limit the depth of the search in the game tree, reducing the complexity of the search.
 
 ## Requirements
 
 - Python 3.x
 
-- Modules: `numpy`
+- Modules: `Numpy`
 
 ## Installation and Use
 
@@ -38,27 +40,26 @@ Follow these steps to set up and run the Tic-Tac-Toe game:
 
 1. Download or clone the repository to your local machine:
 
-  ```bash
-  git clone https://github.com/Daksh2060/tictactoe-adversarial-opponent
-  ```
+   ```bash
+   git clone https://github.com/Daksh2060/tictactoe-adversarial-opponent
+   ```
 
-2. Install `numpy` and `pygame` if not already installed:
+2. Install `Numpy` if not already installed:
 
-  - **numpy:** [Install numpy with pip](https://numpy.org/install/)
+ - **numpy:** [Install numpy with pip](https://numpy.org/install/)
 
-  - **pip:** [Install pip (usually included with python)](https://pip.pypa.io/en/stable/installation/)
+ - **pip:** [Install pip (usually included with python)](https://pip.pypa.io/en/stable/installation/)
 
 3. Run `tic-tac-toe.py` to start the game.
 
-4. To specifcy board size, follow launch command with the following:
+4. To specify board size, follow the launch command with the following, this will result in a 3 x 3 game board, and if left blank will default to a 5 x 5:
 
   ```bash
   C:/Users/.../python.exe c:/Users/.../tictactoe-adversarial-opponent/tic-tac-toe.py 3 3 3
   ```
-  This will result in a 3 x 3 game board, if left blank will default to a 5 x 5.
 
-5. Adjust difficult by choosing a search algorithm, and if using a cutoff variant, adjust the cutoff distance.
-   
+5. Adjust the difficulty by choosing a search algorithm, and if using a cutoff variant, adjust the cutoff distance.
+  
 ## Contact
 
 Feel free to reach out if you have any questions, suggestions, or feedback:
